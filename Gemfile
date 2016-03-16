@@ -15,7 +15,7 @@ gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3' #sqlite3 was here before
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
@@ -26,3 +26,4 @@ group :production do
   gem 'pg'
   gem 'thin'
 end
+ruby "2.2.0"
