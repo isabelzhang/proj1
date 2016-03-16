@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "2.2.0"
 gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -25,4 +26,3 @@ group :production do
   gem 'pg'
   gem 'thin'
 end
-ruby "2.2.4"
