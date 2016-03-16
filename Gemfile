@@ -25,4 +25,4 @@ group :production do
   gem 'pg'
   gem 'thin'
 end
-ruby "2.2.0"
+ruby "2.2.4"
