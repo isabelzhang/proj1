@@ -19,5 +19,8 @@ flash[:error] gives you all the constants stored within each request. So when yo
 # Give us feedback on the project and decal below!
 Very fun. It would be cool to have some direction for HTML on here as well since I had originally wanted to add alot of pictures on here to enhance the home page and see if I can cycle through with matching images of the pokemon but I have no idea how to do that. I think it would be a cool feature.
 
+
 # Extra credit: Link your Heroku deployed app
 https://still-sands-24160.herokuapp.com/
+
+Also implemented healing feature
