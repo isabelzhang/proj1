@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Make Pokemon
-%w(Squirtle Charmander Bulbasaur Pikachu).each do |name|
+%w(Squirtle Charmander Bulbasaur Pikachu Jojomon Houndour Unknown Plusle Wailord Sandshrew Minun Zubat Treecko Mudkip Torchic Wobbuffet Pichu Marill Snorlax Riolu Mew Ditto Blastoise Lapras Vaporeon Porygon Lickitung Staryu Mr.Mime Magikarp Ponyta Doduo Magnemite Bellsprout Geodude Diglet Psyduck Parasect Vulpix Eevee Weedle Metapod Raticate Ekans Raichu).each do |name|
   Pokemon.create name: name, level: rand(1..20), health: 100
 end
 

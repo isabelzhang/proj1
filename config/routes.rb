@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # get "capture", to: "capture"
   patch "capture", to: "pokemons#capture"
   patch "damage", to: "pokemons#damage"
+  # patch "heal", to: "pokemons#heal"
+
 
   get "pokemon/new", to: "pokemons#new"
   post "pokemon/create", to: "pokemons#create"

@@ -10,11 +10,24 @@
   </tr>
   <tr>
     <% @trainer.pokemon.each do |pet|%>
-    <td><%= pet.name %></td> 
-    <td><%= pet.level %></td>
-    <td><%= pet.health %></td>
-    <td><%= button_to "Damage", damage_path(id: pet), :class => "button medium", :method => :patch %> </td>
+    <% if current_trainer.id == @trainer.id%>
+          <td><%= pet.name %></td> 
+          <td><%= pet.level %></td>
+          <td><%= pet.health %></td>
+          <% if pet.health <= 0 %>
+            <td><%= button_to "Heal", damage_path(id: pet), :class => "button medium", :method => :patch %> </td>
+          <% else %>
+            <td><%= button_to "Damage", damage_path(id: pet), :class => "button medium", :method => :patch %> </td>
+          <% end %>    
+        <% end %>  
+        <% if pet.health > 0 and current_trainer.id != @trainer.id %>
+          <td><%= pet.name %></td> 
+          <td><%= pet.level %></td>
+          <td><%= pet.health %></td>
+          <td><%= button_to "Damage", damage_path(id: pet), :class => "button medium", :method => :patch %> </td>
+        <% end %>
   </tr>
+
   <% end %>
 </table>
 <% if @trainer.id == current_trainer.id %>

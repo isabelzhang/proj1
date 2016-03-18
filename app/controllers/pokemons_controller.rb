@@ -8,13 +8,20 @@ class PokemonsController < ApplicationController
 
   def damage
   	@pokemon = Pokemon.find(params[:id])
-    @pokemon.health -= 10
-  	if @pokemon.health <= 0
-  		@pokemon.destroy
-  	else
-	  	@pokemon.save
+    if @pokemon.health <= 0
+      @pokemon.health += 10
+    else
+      @pokemon.health -= 10
     end
+    @pokemon.save
   	redirect_to :back
+  end
+
+  def heal
+    @pokemon = Pokemon.find(params[:id])
+    @pokemon.health += 10
+    @pokemon.save
+    redirect_to :back
   end
 
   def new
